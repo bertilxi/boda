@@ -1,0 +1,13 @@
+---
+import Invite from "@/components/invite.astro";
+import Layout from "@/layout/base.astro";
+import {
+  confirmMessage,
+  createWhatsappLink,
+  ferNumber,
+} from "@/utils/whatsapp";
+---
+
+<Layout>
+  <Invite url={createWhatsappLink(ferNumber, confirmMessage)} />
+</Layout>

@@ -6,7 +6,7 @@ import "@/main.css";
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/image/fav.png" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>Ariana y Fernando</title>
   </head>
@@ -14,69 +14,6 @@ import "@/main.css";
     class="font-serif antialiased min-h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center"
     style="background-image: url('/image/bg.jpg');"
   >
-    <div
-      class="shadow-xl p-1 md:p-2 bg-gradient-to-tr from-amber-400 from-10% via-yellow-500 via-50% to-amber-600 md:my-6"
-    >
-      <div class="shadow-xl p-10 md:p-20 pattern">
-        <div
-          class="shadow-xl relative p-2 md:p-3 bg-gradient-to-bl from-amber-400 from-10% via-yellow-500 via-50% to-amber-600"
-        >
-          <div
-            class="absolute top-0 left-0 right-0 w-full flex justify-center mt-14 md:mt-20"
-          >
-            <img
-              src="/image/rings.png"
-              class="opacity-50 w-16 md:w-24 h-auto"
-            />
-          </div>
-
-          <div
-            class="absolute top-0 left-0 m-[8px] md:m-[11px]"
-            style="mask-image: url('/image/corner.png'); mask-repeat: no-repeat; mask-size: contain;"
-          >
-            <div
-              class="bg-gradient-to-r from-amber-200 from-10% via-yellow-500 via-50% to-amber-600 size-20 md:size-36"
-            >
-            </div>
-          </div>
-
-          <div
-            class="absolute top-0 right-0 m-[8px] md:m-[11px] rotate-90"
-            style="mask-image: url('/image/corner.png'); mask-repeat: no-repeat; mask-size: contain;"
-          >
-            <div
-              class="bg-gradient-to-b from-amber-200 from-10% via-yellow-500 via-50% to-amber-600 size-20 md:size-36"
-            >
-            </div>
-          </div>
-
-          <div
-            class="absolute bottom-0 right-0 m-[8px] md:m-[11px] rotate-180"
-            style="mask-image: url('/image/corner.png'); mask-repeat: no-repeat; mask-size: contain;"
-          >
-            <div
-              class="bg-gradient-to-r from-amber-200 from-10% via-yellow-500 via-50% to-amber-600 size-20 md:size-36"
-            >
-            </div>
-          </div>
-
-          <div
-            class="absolute bottom-0 left-0 m-[8px] md:m-[11px] -rotate-90"
-            style="mask-image: url('/image/corner.png'); mask-repeat: no-repeat; mask-size: contain;"
-          >
-            <div
-              class="bg-gradient-to-b from-amber-200 from-10% via-yellow-500 via-50% to-amber-600 size-20 md:size-36"
-            >
-            </div>
-          </div>
-
-          <!-- <img
-            src="/image/corner.png"
-            class="opacity-50 absolute bottom-0 left-0 m-[8px] md:m-[11px] size-20 md:size-36 -rotate-90"
-          /> -->
-          <slot />
-        </div>
-      </div>
-    </div>
+    <slot />
   </body>
 </html>

@@ -1,25 +1,97 @@
 ---
 import WhatsappIcon from "./whatsapp-icon.astro";
+
+interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
 ---
 
-<div class="flex flex-col items-center leading-relaxed text-center">
-  <h1 class="font-title text-3xl md:text-6xl mb-10 mt-16 md:mb-16 md:mt-24">
-    Ariana & Fernando
-  </h1>
-  <h2 class="font-medium text-lg md:text-2xl mb-10 md:mb-16">
-    Estas cordialmente <br /> invitado a nuestra boda
-  </h2>
-  <p class="font-title text-xl md:text-4xl mb-6 md:mb-10">
-    Sabado 29 de Enero 2024
-  </p>
-  <p class="font-medium text-lg md:text-2xl">Nombre Lugar</p>
-  <p class="font-medium text-lg md:text-2xl mb-16 md:mb-20">Direccion Lugar</p>
+<div
+  class="shadow-xl p-1 md:p-2 bg-gradient-to-tr from-amber-400 from-10% via-yellow-500 via-50% to-amber-600 md:my-6"
+>
+  <div class="shadow-xl p-10 md:p-20 pattern">
+    <div
+      class="shadow-xl relative p-2 md:p-3 bg-gradient-to-bl from-amber-400 from-10% via-yellow-500 via-50% to-amber-600"
+    >
+      <div
+        class="absolute top-0 left-0 right-0 w-full flex justify-center mt-14 md:mt-20"
+      >
+        <img src="/image/rings.png" class="opacity-50 w-16 md:w-24 h-auto" />
+      </div>
 
-  <a
-    href="/"
-    class="inline-flex gap-2 items-center text-black hover:text-white border border-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-gray-300 text-sm md:text-xl px-5 py-2.5 text-center mb-10"
-  >
-    <WhatsappIcon class="text-green-500 size-4 md:size-6" />
-    Confirmar asistencia</a
-  >
+      <div
+        class="absolute top-0 left-0 m-[8px] md:m-[11px]"
+        style="mask-image: url('/image/corner.png'); mask-repeat: no-repeat; mask-size: contain;"
+      >
+        <div
+          class="bg-gradient-to-r from-amber-200 from-10% via-yellow-500 via-50% to-amber-600 size-20 md:size-36"
+        >
+        </div>
+      </div>
+
+      <div
+        class="absolute top-0 right-0 m-[8px] md:m-[11px] rotate-90"
+        style="mask-image: url('/image/corner.png'); mask-repeat: no-repeat; mask-size: contain;"
+      >
+        <div
+          class="bg-gradient-to-b from-amber-200 from-10% via-yellow-500 via-50% to-amber-600 size-20 md:size-36"
+        >
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-0 right-0 m-[8px] md:m-[11px] rotate-180"
+        style="mask-image: url('/image/corner.png'); mask-repeat: no-repeat; mask-size: contain;"
+      >
+        <div
+          class="bg-gradient-to-r from-amber-200 from-10% via-yellow-500 via-50% to-amber-600 size-20 md:size-36"
+        >
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-0 left-0 m-[8px] md:m-[11px] -rotate-90"
+        style="mask-image: url('/image/corner.png'); mask-repeat: no-repeat; mask-size: contain;"
+      >
+        <div
+          class="bg-gradient-to-b from-amber-200 from-10% via-yellow-500 via-50% to-amber-600 size-20 md:size-36"
+        >
+        </div>
+      </div>
+
+      <div
+        class="shadow-inner bg-white py-16 px-4 md:py-20 md:px-10 flex flex-col items-center"
+      >
+        <div class="flex flex-col items-center leading-relaxed text-center">
+          <h1
+            class="font-title text-3xl md:text-6xl mb-10 mt-16 md:mb-16 md:mt-24"
+          >
+            Ariana & Fernando
+          </h1>
+          <h2 class="font-medium text-lg md:text-2xl mb-10 md:mb-16">
+            Estas cordialmente <br /> invitado a nuestra boda
+          </h2>
+          <p class="font-title text-xl md:text-4xl mb-6 md:mb-10">
+            Sabado 29 de Enero 2024
+          </p>
+          <p class="font-medium text-lg md:text-2xl">Nombre Lugar</p>
+          <p class="font-medium text-lg md:text-2xl mb-16 md:mb-20">
+            Direccion Lugar
+          </p>
+
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex gap-2 items-center text-black hover:text-white border border-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-gray-300 text-sm md:text-xl px-5 py-2.5 text-center mb-10"
+          >
+            <WhatsappIcon class="text-green-500 size-4 md:size-6" />
+            Confirmar asistencia</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
