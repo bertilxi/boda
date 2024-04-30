@@ -1,5 +1,5 @@
 ---
-import WhatsappIcon from "./whatsapp-icon.astro";
+import MapIcon from "./map-icon.astro";
 
 interface Props {
   url: string;
@@ -73,23 +73,26 @@ const { url } = Astro.props;
           <h2 class="font-medium text-lg md:text-2xl mb-10 md:mb-16">
             Estas cordialmente <br /> invitado a nuestra boda
           </h2>
-          <p class="font-title text-xl md:text-4xl mb-6 md:mb-10">
-            Sabado 29 de Enero 2024
-          </p>
-          <p class="font-medium text-lg md:text-2xl">Nombre Lugar</p>
-          <p class="font-medium text-lg md:text-2xl mb-16 md:mb-20">
-            Direccion Lugar
+          <p class="font-title text-3xl md:text-5xl">11.00 hs</p>
+          <p class="font-title text-xl md:text-4xl mb-10 md:mb-16">
+            Sábado 13 de Julio 2024
           </p>
 
           <a
-            href={url}
+            class="font-medium text-lg md:text-3xl mb-16 md:mb-20 hover:text-blue-500"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex gap-2 items-center text-black hover:text-white border border-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-gray-300 text-sm md:text-xl px-5 py-2.5 text-center mb-10"
+            href="https://maps.app.goo.gl/cdWoKeyzEc21DkCF6"
           >
-            <WhatsappIcon class="text-green-500 size-4 md:size-6" />
-            Confirmar asistencia</a
-          >
+            <div class="inline-flex items-center gap-2">
+              Casa Club
+              <MapIcon class="text-red-500 size-4 md:size-6" />
+            </div>
+            <br />
+            <span class="text-sm md:text-xl"
+              >Av Luján 4111, Santo Tomé, Santa Fe</span
+            >
+          </a>
         </div>
       </div>
     </div>
